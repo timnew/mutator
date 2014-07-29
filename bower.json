@@ -1,0 +1,33 @@
+{
+  "name": "mutator",
+  "version": "0.1.0",
+  "homepage": "https://github.com/timnew/mutator",
+  "authors": [
+    "TimNew <timnew.wti@gmail.com>"
+  ],
+  "description": "A function to convert plain javascript object(usually deserialized from JSON) into some class instance",
+  "main": "dist/mutator.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "mutate",
+    "plain",
+    "object",
+    "dto",
+    "model",
+    "mutation",
+    "prototype",
+    "type",
+    "class"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

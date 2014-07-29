@@ -1,0 +1,40 @@
+{
+  "name": "mutator",
+  "version": "0.1.0",
+  "description": "A function to convert plain javascript object(usually deserialized from JSON) into some class instance",
+  "main": "lib/mutator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timnew/mutator.git"
+  },
+  "keywords": [
+    "mutate",
+    "plain",
+    "object",
+    "dto",
+    "model",
+    "mutation",
+    "prototype",
+    "type",
+    "class"
+  ],
+  "author": "timnew <timnew.wti@gmail.com> (https://timnew.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timnew/mutator/issues"
+  },
+  "homepage": "https://github.com/timnew/mutator",
+  "dependencies": {
+    "coffee-script": "^1.7.1"
+  },
+  "devDependencies": {
+    "del": "^0.1.1",
+    "gulp": "^3.8.6",
+    "gulp-bump": "^0.1.10",
+    "gulp-coffee": "^2.1.1",
+    "yargs": "^1.2.6"
+  }
+}
