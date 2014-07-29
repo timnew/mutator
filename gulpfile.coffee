@@ -14,9 +14,11 @@ argv = require('yargs')
 paths =
   source:   
     manifest: ['./bower.json', 'package.json']
-    coffee: ['./src/*.coffee']
+    nodeCoffee: ['./src/node/*.coffee']
+    browserCoffee: ['./src/browser/*.coffee']
   dest:
     root: '.'
+    lib: './lib'
     dist: './dist'
 
 gulp.task 'bump', ->  
@@ -25,15 +27,21 @@ gulp.task 'bump', ->
     .pipe gulp.dest(paths.dest.root)  
 
 gulp.task 'clean', (done) ->
-  del paths.dest.dist, done
+  del [paths.dest.dist, paths.dest.lib], done
 
-gulp.task 'coffee', ->
-  gulp.src paths.source.coffee
+gulp.task 'nodeCoffee', ->
+  gulp.src paths.source.nodeCoffee
+    .pipe(coffee())
+    .pipe gulp.dest paths.dest.lib
+
+gulp.task 'browserCoffee', ->
+  gulp.src paths.source.browserCoffee
     .pipe(coffee())
     .pipe gulp.dest paths.dest.dist
 
-gulp.task 'build', ['clean', 'coffee']
+gulp.task 'build', ['clean', 'browserCoffee', 'nodeCoffee']
 gulp.task 'default', ['build']
 
 gulp.task 'watch', ['build'], ->
-  gulp.watch paths.coffee, ['coffee']
+  gulp.watch paths.nodeCoffee, ['nodeCoffee']
+  gulp.watch paths.browserCoffee, ['browserCoffee']
