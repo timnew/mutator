@@ -85,7 +85,7 @@ rectCopy = JSON.parse(rectJSON)
 
 console.log rectCopy.area() # Got error: undefined isn't a function!
 
-rectClone = muate(rectCopy, Rect)
+rectClone = mutate(rectCopy, Rect)
 
 console.log rectClone === rectCopy # true, they are the same instance
 console.log rectCopy.area() # got 10000
