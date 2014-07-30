@@ -21,7 +21,7 @@ paths =
     lib: './lib'
     dist: './dist'
 
-gulp.task 'bump', ->  
+gulp.task 'bump', ['build'], ->  
   gulp.src paths.source.manifest
     .pipe bump { type: argv.bump }
     .pipe gulp.dest(paths.dest.root)  
