@@ -39,10 +39,11 @@ In Browser:
 mutate(instance, klass)
 ```
 
-Brower Support
+Environment Support
 ---------------
-`Mutator` works fine in most browsers. 
-For Internet Explorer prior than `IE 11`, because of lack of `object.__proto__`, a hard-copy work around is applied.
+`Mutator` works fine in most browsers and `Node.js`.
+
+For `Internet Explorer`, prior than `IE 11`, because of lack of `object.__proto__`, a hard-copy work around is applied.
 
 Quick Sample
 ------------
