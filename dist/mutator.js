@@ -17,7 +17,7 @@
   };
 
   fixForIE = function(instance, klass, args) {
-    var k, v;
+    var k, v, _ref;
     if (args == null) {
       args = [];
     }
@@ -27,8 +27,9 @@
     if (typeof klass !== 'function') {
       throw 'Klass must be a class';
     }
-    for (k in klass) {
-      v = klass[k];
+    _ref = klass.prototype;
+    for (k in _ref) {
+      v = _ref[k];
       if (instance[k] === void 0) {
         instance[k] = v;
       }
