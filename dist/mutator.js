@@ -38,6 +38,6 @@
     return instance;
   };
 
-  this.mutate = {}.__proto__ === void 0 ? (console.warn('__proto__ is not supported by current browser, fallback to hard-copy approach'), fixForIE) : mutate;
+  this.mutate = {}.__proto__ === void 0 ? (window.console != null ? console.warn('__proto__ is not supported by current browser, fallback to hard-copy approach') : void 0, fixForIE) : mutate;
 
 }).call(this);

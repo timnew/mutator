@@ -16,8 +16,8 @@ fixForIE = (instance, klass, args = []) ->
   klass.apply(instance, args)
   instance  
 
-@mutate = if ({}).__proto__ is undefined
-            console.warn '__proto__ is not supported by current browser, fallback to hard-copy approach'
+@mutate = if ({}).__proto__ is undefined            
+            console.warn '__proto__ is not supported by current browser, fallback to hard-copy approach' if window.console?
             fixForIE
           else
             mutate
