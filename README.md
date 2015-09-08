@@ -28,15 +28,15 @@ function mutate(instance, class, [argument passed to constructor])
 In Node.js:
 
 ```javascript
-mutate = require('mutate')
+const mutate = require('mutator');
 
-mutate(instance, klass)
+mutate(instance, klass);
 ```
 
 In Browser:
 
 ```javascript
-mutate(instance, klass)
+mutate(instance, klass);
 ```
 
 Environment Support
@@ -79,7 +79,7 @@ When consuming the JSON
 
 ```coffeescript
 
-mutate = require('mutate')
+mutate = require('mutator')
 
 rectCopy = JSON.parse(rectJSON)
 
@@ -87,7 +87,7 @@ console.log rectCopy.area() # Got error: undefined isn't a function!
 
 rectClone = mutate(rectCopy, Rect)
 
-console.log rectClone === rectCopy # true, they are the same instance
+console.log rectClone == rectCopy # true, they are the same instance
 console.log rectCopy.area() # got 10000
 
 ```
